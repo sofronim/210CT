@@ -1,0 +1,54 @@
+class Graph:     
+	            def __init__(self):   #creating the constructor defining the lists of nodes  and edges     
+	                    self.nodes = []     
+	                    self.edges = []     
+	                    self.togo = []     
+	                    self.past = []     
+          
+	            def add_node(self,nodenum): #function of adding the nodes     
+	                for i in range (nodenum):     
+	                    self.nodes.append(i)     
+	                print (self.nodes)     
+	          
+	            def edge_check(self,nodenum,edge): #fucntion to check if the edge exist  
+	               if (nodenum,edge) in self.nodes:              
+	                    return True     
+	               else:     
+	  
+	                    return False     
+	  
+	            def node_check(self,nodenum): #fucntion to check if the nodes exist     
+	                if nodenum in self.nodes:  
+	                    return True     
+	                else:  
+	                    return False     
+	            def add_edge(self,nodenum,edge):  #adding the edges     
+	                if self.node_check(nodenum) and self.node_check(edge):  
+	                    print ("The edge is already in the graph")  
+	                elif not self.edge_check(nodenum,edge):     
+	                    self.edges.append(nodenum,edge)     
+	                    self.edges.append(edge,nodenum)     
+	                    self.togo.append(edge)     
+	                    print ("The edge is succesfully added")                    
+	                else:     
+	                        print ("The node is wrong")    
+	             
+	            def display(self):  #printing the nodes and the edges     
+	                print ("The nodes of the graph are: ", self.nodes)           
+	                print ("The edges of the graph are: ", self.edges)   
+	                print ("The edges needed to pass are: ",self.togo)           
+	                print ("The path to get in the destination :",self.past)      
+	          
+	              
+test=Graph()#assing graph to test     
+test.display()#calling the prinitng function     
+test.add_node(15)#adding the nodes     
+test.add_edge(2,4)#adding the edges     
+test.add_edge(1,9)     
+test.add_edge(14,9)     
+test.add_edge(12,8)     
+test.add_edge(2,12)     
+test.add_edge(7,1)     
+test.add_edge(6,2)     
+test.add_edge(13,3)  
+test.display  
