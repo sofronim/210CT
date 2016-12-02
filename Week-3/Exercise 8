@@ -1,0 +1,16 @@
+def remove_vowels(s):   
+	    if not s: # empty string  
+	        return s  
+	    elif s[0] in "aeiouAEIOU": # first character is vowel  
+	        return remove_vowels(s[1:]) # skip first character and process rest  
+	    return s[0] + remove_vowels(s[1:]) # return first character and process rest  
+print(remove_vowels("beautiful"))  
+
+PSEUDOCODE
+
+REMOVE_VOWELS(S)  
+	if not s
+	    return s  
+	elif s[1] in "aeiouAEIOU"
+	        return remove_vowels(s[2:])   
+	    return s[1] + remove_vowels(s[2:])
