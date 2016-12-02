@@ -1,0 +1,27 @@
+def prime(number,divisor):  
+	    if number <= 1 :  
+	        return  
+	    else:  
+	        if number < divisor :  
+	            return  
+	        elif number == 2 :  
+	            return "Its a prime number"  
+	        elif number % divisor == 0 :  
+	            return "Its not a prime number"  
+	        else:  
+	              return "Its a prime number"
+                      
+                      
+                        PSEUDOCODE
+   	PRIME(NUMBER,DIVISOR)  
+	if number <= 1   
+	    return  
+	else  
+	    if number < divisor   
+        return  
+      elif number = 2   
+	        return "Its a prime number"  
+	    elif number % divisor = 0   
+	        return "Its not a prime number"  
+	    else  
+	          return "Its a prime number"  
