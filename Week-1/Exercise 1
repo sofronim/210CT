@@ -1,0 +1,17 @@
+import random  	  
+mystring = input("Insert a list")                     #1  
+mylist = mystring.split()                             #1  
+condition= True                                       #1  
+finallist= []                                         #1  
+	  
+while condition == True:                              #n times  
+	    if len(mylist) == len(finallist) :                #1   
+	        condition = False                             #1   
+	    item = random.choice(mylist)                      #n times  
+	    if item in finallist:                             #n times  
+	        continue                                      #n times     
+	    else:                                             #n times  
+	        finallist.append(item)                        #n times  
+print(finallist)                                      #1  
+	  
+Complexity:O(n)                                                            
