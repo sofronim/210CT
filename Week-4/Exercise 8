@@ -1,0 +1,45 @@
+def binary_search( Lista, low, high):  
+	  
+	    found = False  
+	    bottom = 0  
+	    top = len(Lista)  
+	  
+	    while bottom<=top and not found:  
+	        midpoint = (bottom+top)//2  
+	          
+	        if Lista[midpoint] >= low and Lista[midpoint] <= high:  
+	            found = True  
+	        else:  
+	            if Lista[midpoint] > low:  
+	                top = midpoint - 1  
+	            else:  
+	                bottom = midpoint + 1  
+	                  
+	    return found  
+	  
+print (binary_search([2,3,5,7,9,13], 10, 14))  
+	  
+Big O notation:O(n)  
+
+
+
+PSEUDOCDOE
+
+
+BINARY SEARCH(LISTA,LOW,HIGH)  
+	        found ←  False  
+	    bottom ←  0  
+	    top ←  len(Lista)  
+	  
+	    while bottom <← top and not found
+	        midpoint ←  (bottom+top)//2  
+	          
+	        if Lista[midpoint] >←  low and Lista[midpoint] <←  high
+	            found ←  True  
+	        else
+	            if Lista[midpoint] > low:  
+	                top ←  midpoint - 1  
+	            else 
+	                bottom ←  midpoint + 1  
+	                  
+	    return found  
