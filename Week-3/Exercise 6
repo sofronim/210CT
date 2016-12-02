@@ -1,0 +1,24 @@
+def reverse(sentence):    
+	    word=sentence.split()                               #1  
+	    lastword = len(word) - 1                            #1  
+	    midword = len(word) / 2                             #1  
+	    for firstword in range( 0, int(midword)) :          #1  
+	        pointer=word[lastword]                          #1  
+	        word[lastword] = word[firstword]                #1  
+	        word[firstword]=pointer                         #1  
+	        lastword=lastword - 1                           #1  
+	    return word                                         #1  
+print(reverse("This is awesome"))                         #1  
+	  
+Big O notation:O(n)  
+                        PSEUDOCODE
+              REVERSE(SENTENCE)  
+         word← sentence.split()  
+	    lastword ← len(word) - 1  
+	    midword ← len(word) / 2  
+	    for firstword in range( 0, int(midword))  
+	        pointer ← word[lastword]  
+	        word[lastword] ← word[firstword]  
+	        word[firstword] ← pointer  
+	        lastword ← lastword - 1  
+	    return word  
