@@ -1,0 +1,7 @@
+def trailing_zeroes(n):  
+	    if n < 5:                                       #n times  
+	        return 0                                    #1   
+	    else:                                           #n times  
+	        return (n//5+trailing_zeroes(n//5))         #n times  
+	  
+Complexity:O(n)
