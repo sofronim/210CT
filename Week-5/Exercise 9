@@ -1,0 +1,27 @@
+def ascending(sequence):  
+	    count = 0  
+	    Lista, finalList = [], []  
+	  
+	    #Lista stores the number of counts  
+	    #finalList stores the output  
+	      
+	    for x in range(len(sequence)):  
+	        if x + 1 == len(sequence):  
+	            maximum = max(Lista)  
+	            a = Lista.index(maximum)       
+	        else:  
+	            y = x + 1  
+	            if sequence[y] >sequence[x]:  
+	                count = count + 1  
+	            else:  
+	                count = 0  
+	            Lista.append(count)  
+	  
+	    while maximum + 1 != 0:  
+	        finalList.append(sequence[a+1])  
+	        a = a - 1  
+	        maximum = maximum - 1  
+	              
+	    return finalList[::-1]  
+	  
+print (ascending([1,2,3,4,1,5,1,6,7]))
